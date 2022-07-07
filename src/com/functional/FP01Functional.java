@@ -9,16 +9,18 @@ public class FP01Functional {
         printEvenNumbersInListFunctional(integers);
     }
 
-    public static boolean isEven(int number){
+    public static boolean isEven(int number) {
         return number % 2 == 0;
     }
 
     private static void printEvenNumbersInListFunctional(List<Integer> integers) {
-        integers.stream().filter(FP01Functional::isEven)
+        integers.stream()
+//                .filter(number -> number % 2 == 0)
+                .filter(FP01Functional::isEven)
                 .forEach(System.out::println);
     }
 
-    public static void print(int number){
+    public static void print(int number) {
         System.out.println(number);
     }
 
